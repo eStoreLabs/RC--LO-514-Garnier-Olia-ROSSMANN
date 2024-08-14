@@ -33,6 +33,12 @@ body {
   padding: 0;
   margin: 0;
 }
+#es-rc #es-rc-content ::-moz-selection {
+  background: #E4107E;
+}
+#es-rc #es-rc-content ::selection {
+  background: #E4107E;
+}
 #es-rc #es-rc-content .es-title {
   background-color: #FFD822;
   max-width: -moz-max-content;
@@ -47,6 +53,7 @@ body {
 #es-rc #es-rc-content .es-kv__logoCtn {
   background: #FFFFFF;
   padding-block: 6px;
+  overflow: hidden;
 }
 #es-rc #es-rc-content .es-kv__logoCtn img {
   max-width: 250px;
@@ -123,6 +130,13 @@ body {
   display: flex;
   align-content: end;
   flex-wrap: wrap;
+  overflow: hidden;
+}
+#es-rc #es-rc-content .es-safe__imgCtn img {
+  transition: all 200ms ease-in-out;
+}
+#es-rc #es-rc-content .es-safe__imgCtn img:hover {
+  scale: 1.1;
 }
 #es-rc #es-rc-content .es-features {
   background-image: url("/images/sunflower_bg.png");
@@ -145,6 +159,12 @@ body {
   gap: 16px;
   max-width: 150px;
 }
+#es-rc #es-rc-content .es-features__single img {
+  transition: all 200ms ease-in-out;
+}
+#es-rc #es-rc-content .es-features__single:hover img {
+  transform: translateY(-10%);
+}
 #es-rc #es-rc-content .es-features__descr {
   color: #FFFFFF;
   font-size: 16px;
@@ -162,6 +182,11 @@ body {
 }
 #es-rc #es-rc-content .es-package__item {
   position: relative;
+  transition: all 200ms ease-in-out;
+  z-index: 2;
+}
+#es-rc #es-rc-content .es-package__item:hover {
+  scale: 1.1;
 }
 #es-rc #es-rc-content .es-package__item::before {
   position: absolute;
@@ -208,6 +233,7 @@ body {
 }
 #es-rc #es-rc-content .es-colors__item {
   position: relative;
+  transition: all 200ms ease-in-out;
 }
 #es-rc #es-rc-content .es-colors__item::before {
   position: absolute;
@@ -217,6 +243,9 @@ body {
   background-color: #E4107E;
   top: 50%;
   left: -15px;
+}
+#es-rc #es-rc-content .es-colors__item:hover {
+  margin-left: -2%;
 }
 #es-rc #es-rc-content .es-colors__imgCtn {
   padding: 32px;
@@ -240,6 +269,16 @@ body {
   font-size: 24px;
   margin-right: 8px;
 }
+#es-rc #es-rc-content .es-colors__figureimgCtn {
+  overflow: hidden;
+  outline: 2px solid #FFFFFF;
+}
+#es-rc #es-rc-content .es-colors__figureimgCtn img {
+  transition: all 200ms ease-in-out;
+}
+#es-rc #es-rc-content .es-colors__figureimgCtn img:hover {
+  scale: 1.1;
+}
 #es-rc #es-rc-content .es-use {
   margin-top: 50px;
 }
@@ -257,6 +296,10 @@ body {
 #es-rc #es-rc-content .es-use__img {
   margin-bottom: 32px;
   aspect-ratio: 1/1;
+  transition: all 200ms ease-in-out;
+}
+#es-rc #es-rc-content .es-use__single:hover img {
+  transform: translateY(-10%);
 }
 #es-rc #es-rc-content .es-footer {
   text-align: center;
@@ -328,6 +371,13 @@ body {
   }
   #es-rc #es-rc-content .es-kv__left {
     width: 50%;
+    overflow: hidden;
+  }
+  #es-rc #es-rc-content .es-kv__left img {
+    transition: all 200ms ease-in-out;
+  }
+  #es-rc #es-rc-content .es-kv__left img:hover {
+    scale: 1.1;
   }
   #es-rc #es-rc-content .es-kv__right {
     width: 50%;
@@ -346,10 +396,17 @@ body {
     margin-top: 105px;
     width: 50%;
   }
+  #es-rc #es-rc-content .es-kv__packshotCtn img {
+    transition: all 200ms ease-in-out;
+  }
+  #es-rc #es-rc-content .es-kv__packshotCtn img:hover {
+    scale: 1.1;
+  }
   #es-rc #es-rc-content .es-kv__packshotCtn::before {
     width: 126px;
     height: 112px;
     left: -64%;
+    z-index: 2;
   }
   #es-rc #es-rc-content .es-kv__logo--olia {
     margin-right: 3rem;

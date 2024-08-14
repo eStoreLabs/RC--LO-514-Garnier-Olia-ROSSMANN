@@ -37,6 +37,10 @@ body {
         margin: 0;
     }
 
+    ::selection {
+        background: $accent;
+    }
+
     .es-title {
         background-color: $secondary;
         max-width: max-content;
@@ -66,11 +70,15 @@ body {
         &__logoCtn {
             background: $white;
             padding-block: 6px;
+            overflow: hidden;
 
             img {
                 max-width: 250px;
                 margin-bottom: -18px;
+
             }
+
+
         }
 
         &__right--bgWrapper {
@@ -156,6 +164,15 @@ body {
             display: flex;
             align-content: end;
             flex-wrap: wrap;
+            overflow: hidden;
+        }
+
+        &__imgCtn img {
+            transition: all 200ms ease-in-out;
+        }
+
+        &__imgCtn img:hover {
+            scale: 1.1;
         }
 
     }
@@ -183,6 +200,14 @@ body {
             max-width: 150px;
         }
 
+        &__single img {
+            transition: all 200ms ease-in-out;
+        }
+
+        &__single:hover img {
+            transform: translateY(-10%);
+        }
+
         &__descr {
             color: $white;
             font-size: 16px;
@@ -202,8 +227,16 @@ body {
             gap: 8px;
         }
 
+
+
         &__item {
             position: relative;
+            transition: all 200ms ease-in-out;
+            z-index: 2;
+        }
+
+        &__item:hover {
+            scale: 1.1;
         }
 
         &__item::before {
@@ -238,6 +271,7 @@ body {
             width: 80%;
             max-width: 500px;
         }
+
     }
 
     .es-colors {
@@ -257,6 +291,7 @@ body {
 
         &__item {
             position: relative;
+            transition: all 200ms ease-in-out;
         }
 
         &__item::before {
@@ -267,6 +302,10 @@ body {
             background-color: $accent;
             top: 50%;
             left: -15px;
+        }
+
+        &__item:hover {
+            margin-left: -2%;
         }
 
         &__imgCtn {
@@ -294,6 +333,20 @@ body {
             font-size: 24px;
             margin-right: 8px;
         }
+
+        &__figureimgCtn {
+            overflow: hidden;
+            outline: 2px solid $white;
+        }
+
+        &__figureimgCtn img {
+            transition: all 200ms ease-in-out;
+        }
+
+        &__figureimgCtn img:hover {
+            scale: 1.1;
+
+        }
     }
 
     .es-use {
@@ -315,6 +368,11 @@ body {
         &__img {
             margin-bottom: 32px;
             aspect-ratio: 1/1;
+            transition: all 200ms ease-in-out;
+        }
+
+        &__single:hover img {
+            transform: translateY(-10%);
         }
     }
 
@@ -419,12 +477,21 @@ body {
 
             &__left {
                 width: 50%;
+                overflow: hidden;
+            }
 
+            &__left img {
+                transition: all 200ms ease-in-out;
+            }
+
+            &__left img:hover {
+                scale: 1.1;
             }
 
             &__right {
                 width: 50%;
             }
+
 
             &__banner {
                 font-size: 24px;
@@ -444,10 +511,19 @@ body {
                 width: 50%;
             }
 
+            &__packshotCtn img {
+                transition: all 200ms ease-in-out;
+            }
+
+            &__packshotCtn img:hover {
+                scale: 1.1;
+            }
+
             &__packshotCtn::before {
                 width: 126px;
                 height: 112px;
                 left: -64%;
+                z-index: 2;
             }
 
             &__logo--olia {
